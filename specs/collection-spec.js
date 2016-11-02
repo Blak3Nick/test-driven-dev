@@ -15,4 +15,12 @@ describe('Collection', function () {
      });
 
    });
+    describe("contains", function () {
+       describe("when the item exists", function () {
+          expect(oneCollection.contains(item).toBe(true));
+           expect(manyCollection.contains(item).toBe(true));
+           expect(emptyCollection.contains(item).toBe(false));
+       });
+    });
+
 });
